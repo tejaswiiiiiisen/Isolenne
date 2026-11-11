@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="img" src="file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/c27bee59-c727-4ff2-9d4d-3d2f3e75354e/test_website_dev_1793104135782.jpg">
+<div id="out"></div>
+<script>
+window.onload = () => {
+    const img = document.getElementById('img');
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth;
+    c.height = img.naturalHeight;
+    const ctx = c.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const data = c.toDataURL('image/webp', 0.92);
+    document.getElementById('out').innerText = data;
+};
+</script>
+</body>
+</html>
